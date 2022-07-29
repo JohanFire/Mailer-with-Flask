@@ -1,6 +1,5 @@
 # sacar vars de entorno para config la DB, config la api para el Email services y tener el ambiente config
 import os
-from webbrowser import get
 from flask import Flask
 
 def create_app():
@@ -14,5 +13,8 @@ def create_app():
         DATABASE_USER = os.environ.get("FLASK_DATABASE_USER"),
         DATABASE = os.environ.get("FLASK_DATABASE"),
     )
+
+    from . import db
+    db.init_app(app)
 
     return app

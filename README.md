@@ -12,10 +12,23 @@ python -m venv venv
 . venv/Scripts/activate
 agregará "(venv)" a la izquierda de la línea de comandos
 
-# Instalar FLASK:
+# ver el nombre de las DB en MySQL
 
-pip install Flask
+usando esta comando :
+SHOW DATABASES
 
-# Si llega a dar error habrá que instalar el pip de neovim
+# USANDO GIT BASH (MEJOR OPCION QUE CMD):
 
-pip install neovim
+7.-
+ejecutar las variables de entorno en la consola para poder ejecutar el script
+. venv/Scripts/activate
+
+- export FLASK_APP=todo
+- export FLASK_ENV=development
+- export FLASK_DATABASE_HOST='localhost'
+- export FLASK_DATABASE_PASSWORD='manageDByeah'
+- export FLASK_DATABASE_USER='chanchitoManager'
+- export FLASK_DATABASE=''
+- flask init-db
+
+tiene que imprimir: "Base de datos inicializada."
