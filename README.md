@@ -32,3 +32,11 @@ ejecutar las variables de entorno en la consola para poder ejecutar el script
 - flask init-db
 
 tiene que imprimir: "Base de datos inicializada."
+
+# Crear archivo ".env" y no compartirlo con nadie
+
+crearlo en la ruta base "./"
+
+e instalar el paquete pip:
+
+- pip install python-dotenv
