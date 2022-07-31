@@ -37,5 +37,5 @@ def init_db_command():
     click.echo("Base de datos inicializada.")
 
 def init_app(app):
-    app.teardoww_appcontext(close_db)
+    app.teardown_appcontext(close_db)
     app.cli.add_command(init_db_command)

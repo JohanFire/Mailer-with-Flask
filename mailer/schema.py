@@ -1,5 +1,5 @@
 instructions = [
-    'DROP TABLE IF EXIST email;',
+    'DROP TABLE IF EXISTS email;',
     """
         CREATE TABLE email(
             id INT PRIMARY KEY AUTO_INCREMENT,
