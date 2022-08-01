@@ -40,3 +40,17 @@ crearlo en la ruta base "./"
 e instalar el paquete pip:
 
 - pip install python-dotenv
+
+# Definiendo Blueprints:
+
+ahora al hacer cambios y hacer reload en el navegador NO se muestran los cambios, ya que definimos variables de producción, en consola se muestra el siguiente error:
+flask run
+
+- Serving Flask app 'mailer' (lazy loading)
+- Environment: production
+  WARNING: This is a development server. Do not use it in a production deployment.
+
+Para arreglarlo hay que cambiar el env a development:
+
+- export FLASK_ENV=development
+  esto cambia el enviroment a development
