@@ -60,5 +60,5 @@ def create():
 
     return render_template("mails/create.html")
 
-def send(to, subject, content):
-    sg = sendgrid.SendGridAPIClient(api_key=current_app.config["SENDGRID_KEY"])
+# def send(to, subject, content):
+#     sg = sendgrid.SendGridAPIClient(api_key=current_app.config["SENDGRID_KEY"])
