@@ -4,8 +4,10 @@ from sqlite3 import connect
 from flask import (
     Blueprint,
     flash,
+    redirect,
     render_template,
-    request
+    request,
+    url_for
 )
 from mailer.db import get_db
 
@@ -39,7 +41,13 @@ def create():
 
 
         if len(errors) == 0:
-            pass
+            db, c = get_db()
+            c.execute(
+                "INSERT INTO email (email, subject, content) VALUES (%s, %s, %s)", (email, subject, content)
+            )
+            db.commit()
+
+            return redirect(url_for("mail.index"))
         else:
             print(errors)
             for error in errors:
