@@ -63,3 +63,8 @@ Para arreglarlo hay que cambiar el env a development:
   4.- Copiar los links generados y pegarlos en el css debajo del link del css y encima del título
   5.- Para que aparezca la fuente, se tiene que indicar en el .css
   font-family: 'Raleway', sans-serif;
+
+  # Enviar correos con SendGrid
+
+  https://sendgrid.com
+  pendiente...
