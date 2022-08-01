@@ -1,0 +1,4 @@
+body{
+    /* indica cargar fuente Raleway, en caso de q no la pueda cargar, cargará sans-serif */
+    font-family: 'Raleway', sans-serif;
+}

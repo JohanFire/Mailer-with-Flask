@@ -54,3 +54,12 @@ Para arreglarlo hay que cambiar el env a development:
 
 - export FLASK_ENV=development
   esto cambia el enviroment a development
+
+  # Buscar fuentes css de Google
+
+  1.- Ir a Google Fonts
+  2.- Buscar o elegir la fuente, en este caso "Raleway"
+  3.- En este caso elegí las fuentes: Regular 400, SemiBold 600
+  4.- Copiar los links generados y pegarlos en el css debajo del link del css y encima del título
+  5.- Para que aparezca la fuente, se tiene que indicar en el .css
+  font-family: 'Raleway', sans-serif;
