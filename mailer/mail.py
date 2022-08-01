@@ -1,6 +1,11 @@
+from distutils.log import error
+import email
+from sqlite3 import connect
 from flask import (
     Blueprint,
-    render_template
+    flash,
+    render_template,
+    request
 )
 from mailer.db import get_db
 
@@ -19,4 +24,27 @@ def index():
 
 @bp.route("/create", methods=["GET", "POST"])
 def create():
+    if request.method == "POST":
+        email = request.form.get('email')
+        subject = request.form.get('subject')
+        content = request.form.get('content')
+        errors = []
+
+        if not email:
+            errors.append("Ingresa un correo")
+        if not subject:
+            errors.append("El asunto es obligatorio")
+        if not content:
+            errors.append("El contenido es obligatorio")
+
+
+        if len(errors) == 0:
+            pass
+        else:
+            print(errors)
+            for error in errors:
+                flash(error)
+
+        # print(email, subject, content)
+
     return render_template("mails/create.html")
