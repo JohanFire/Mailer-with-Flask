@@ -113,7 +113,7 @@ echo "web: flask init-db; gunicorn mailer: 'create_app()'" > Procfile
 heroku config:set FLASK_APP=mailer
 heroku config:set SECRET_KEY='millavesecreta'
 
-12.- agregar los 2 nuevos archivos "Procfile" y "requirements.txt" al repo
+12.- agregar los 2 nuevos archivos "Procfile" y "requirements.txt" al repo y a heroku
 git add .
 git commit -m "Últimos cambios para primer push a Heroku"
 git push
