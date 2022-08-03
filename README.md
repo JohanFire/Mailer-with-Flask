@@ -23,12 +23,12 @@ SHOW DATABASES
 ejecutar las variables de entorno en la consola para poder ejecutar el script
 . venv/Scripts/activate
 
-- export FLASK_APP=todo
+- export FLASK_APP=mailer
 - export FLASK_ENV=development
 - export FLASK_DATABASE_HOST='localhost'
 - export FLASK_DATABASE_PASSWORD='manageDByeah'
 - export FLASK_DATABASE_USER='chanchitoManager'
-- export FLASK_DATABASE=''
+- export FLASK_DATABASE='pruebaMailer'
 - flask init-db
 
 tiene que imprimir: "Base de datos inicializada."
@@ -63,11 +63,6 @@ Para arreglarlo hay que cambiar el env a development:
 4.- Copiar los links generados y pegarlos en el css debajo del link del css y encima del título
 5.- Para que aparezca la fuente, se tiene que indicar en el .css
 font-family: 'Raleway', sans-serif;
-
-# Enviar correos con SendGrid
-
-https://sendgrid.com
-pendiente...
 
 # Hacer deploy en Heroku
 
@@ -118,3 +113,13 @@ git add .
 git commit -m "Últimos cambios para primer push a Heroku"
 git push
 git push heroku main
+
+# Enviar correos con SendGrid
+
+https://sendgrid.com
+pendiente...
+
+pip install sendgrid
+poner la API Key en el archivo .env
+
+funciona aunque por alguna razón los correos llegan a spam :p
